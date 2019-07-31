@@ -1,11 +1,15 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text>Jefferson GOSTOSO DEMAIS!</Text>
+      <View style={styles.container}> 
+      <Button>Aperte!</Button>
     </View>
+    </View>
+    
   );
 }
 
@@ -17,4 +21,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     
   },
+  bloco1: {
+    flex: 0.5,
+    backgroundColor: '#de0303'
+  }
 });
