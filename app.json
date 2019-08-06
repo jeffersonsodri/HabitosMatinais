@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "69b4-f0ac",
+    "name": "Projeto_Habitos",
     "slug": "projetoRN",
     "privacy": "public",
     "sdkVersion": "34.0.0",
@@ -25,6 +25,7 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": ""
   }
 }
