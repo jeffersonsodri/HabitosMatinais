@@ -1,24 +1,27 @@
-const {Schema, model} = require('mongoose');
+const {
+    Schema,
+    model
+} = require('mongoose');
 
- const ActivictySchema =  new Schema({
+const ActivictySchema = new Schema({
 
-    nome: { 
-        type: String, 
+    nome: {
+        type: String,
         require: true
     },
-    alarm : {
-        type: Date, 
+    alarm: {
+        type: Date,
         require: true
     },
-    status: { 
+    status: {
         type: String,
         require: false,
         uppercase: true,
-        enum: [ 'FEITO', 'EM ANDAMENTO', 'PENDENTE']
+        enum: ['FEITO', 'EM ANDAMENTO', 'PENDENTE']
     }
 
- });
+});
 
 
 
- module.exports = model('Activity', ActivictySchema);
+module.exports = model('Activity', ActivictySchema);

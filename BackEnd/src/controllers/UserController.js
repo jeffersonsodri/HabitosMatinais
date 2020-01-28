@@ -9,13 +9,23 @@ module.exports = {
         const user = await User.create({
             name
         })
-        console.log(user);
 
-        return res.json(user);
+        const userExist = await User.findOne({name: name});
+
+        if( userExist){
+            console.log(`${name} Já existe`);
+            return res.json(userExist);
+        }
+        else {
+            console.log(user);
+            return res.json(user);
+
+        }
+
 
     },
 
-    async index (req, res) {
+    async index (req, res) { 
         console.log('Entrei para listar os Usuários')
 
         const { id } = req.headers;
@@ -27,6 +37,12 @@ module.exports = {
             name: "Jefferson"
         });
 
+    },
+
+    async delete(req, res) {
+
+        
+        return res.json({msg: "Usuário deletado com sucesso!"})
     }
 
 

@@ -10,7 +10,9 @@ mongoose.connect('mongodb+srv://habits:123@cluster0-7uu3i.mongodb.net/morningHab
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-server.use(bodyParser.urlencoded({extended:true}));
+server.use(bodyParser.urlencoded({
+    extended: true
+}));
 server.use(bodyParser.json());
 
 server.use(cors());
@@ -18,6 +20,6 @@ server.use(express.json());
 server.use(routes);
 
 
-server.listen(3535,() => {
+server.listen(3535, () => {
     console.log("Server conectado!");
 });
